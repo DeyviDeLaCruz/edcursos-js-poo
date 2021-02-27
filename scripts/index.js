@@ -117,3 +117,5 @@ formNewAlumno.addEventListener("submit", function (event) {
   mostrarAlumno(alumno)
   formNewAlumno.reset()
 })
+
+export { mostrarCurso, mostrarProfesor, mostrarAlumno }
