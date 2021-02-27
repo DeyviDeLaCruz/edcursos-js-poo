@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDCursos</title>
+  <link rel="stylesheet" href="https://ux.ed.team/css/styles.css?201803301710">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .section {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ed-grid">
+    <h1>EDCursos con POO</h1>
+
+    <div id="ui-tabs" class="edui-tabs">
+      <div class="tabs" data-tab="0">
+        <div class="tab active">
+          <i class="fa fa-book" aria-hidden="true"></i> Nuevo Curso
+        </div>
+        <div class="tab">
+          <i class="fa fa-user-secret" aria-hidden="true"></i> Nuevo Profesor
+        </div>
+        <div class="tab">
+          <i class="fa fa-users" aria-hidden="true"></i> Nuevo Alumno
+        </div>
+      </div>
+      <div class="panels">
+        <div class="panel active">
+          <form id="formNewCurso">
+            <div class="ed-grid m-grid-2">
+              <div class="form-item">
+                <label>
+                  Nombre:
+                  <input type="text" name="nombre" autofocus required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Poster:
+                  <input type="text" name="poster" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  N° Clases:
+                  <input type="number" name="clases" min="1" required>
+                </label>
+              </div>
+              <div class="form-item m-py-3">
+                <input type="submit" class="button full" value="Crear Curso">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="panel">
+          <form id="formNewProfesor">
+            <div class="ed-grid m-grid-3">
+              <div class="form-item">
+                <label>
+                  Nombres:
+                  <input type="text" name="nombres" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Apellidos:
+                  <input type="text" name="apellidos" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Correo:
+                  <input type="email" name="correo" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Cursos Dictados:
+                  <input type="number" step="1" min="0" name="cursosDictados" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Calificacion (1-10):
+                  <input type="number" step="1" min="1" max="10" name="calificacion" required>
+                </label>
+              </div>
+              <div class="form-item m-py-3">
+                <input type="submit" class="button full" value="Registrar Profesor">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="panel">
+          <form id="formNewAlumno">
+            <div class="ed-grid m-grid-3">
+              <div class="form-item">
+                <label>
+                  Nombres:
+                  <input type="text" name="nombres" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Apellidos:
+                  <input type="text" name="apellidos" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Correo:
+                  <input type="email" name="correo" required>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  Cursos Tomados:
+                  <input type="number" step="1" min="0" name="cursosTomados" required>
+                </label>
+              </div>
+              <div class="form-item m-py-3">
+                <input type="submit" class="button full" value="Registrar Alumno">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section ed-grid m-grid-4 s-grid-2" id="cursos">
+
+  </div>
+
+  <div class="ed-grid section">
+    <div class="table-container">
+      <table id="table-profesores">
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+            <th>Cursos Dictados</th>
+            <th>Calificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="ed-grid section">
+    <div class="table-container">
+      <table id="table-alumnos">
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+            <th>Cursos Tomados</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <script type="module" src="./scripts/index.js"></script>
+  <script src="./scripts/tabs.js"></script>
+</body>
+</html>
